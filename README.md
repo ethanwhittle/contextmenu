@@ -14,9 +14,9 @@ The primary function call (.contextMenu()) is an extension of jQuery and as such
 
 The function requires an object to be parsed. The example below will result in a basic context menu.
 
-$('body').contextMenu({
+`$('body').contextMenu({
   'Item 1': ''
-});
+});`
 
 You then have to decide what to do with the item in the context menu, this can be defined with a function. For example:
 
