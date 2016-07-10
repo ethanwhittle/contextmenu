@@ -8,117 +8,97 @@
         <style>
             * { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
             html, body { height: 100%; width: 100%; position: absolute; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+            div { height: 90%; width: 48%; margin: 0 1%; float: left; top: 5%; position: relative; text-align: center; font-size: 200%; color: #f5fffa; }
+            div:nth-of-type(1) { background-color: green; }
+            div:nth-of-type(2) { background-color: blue; }
+            span { width: 100%; position: relative; top: 50%; -webkit-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); }
         </style>
     </head>
     <body>
-        <div>Right click for menu</div>
+        <div id="block1">
+            <span>Block 1</span>
+        </div>
+        <div id="block2">
+            <span>Block 2</span>
+        </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.js"></script>
         <script src="contextmenu.js"></script>
         <script>
-            $('body').contextMenu({
-                'Item 1': {
-                    'Sub Item 1': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
+            
+            $('#block1').contextMenu({
+                'Block 1 Item 1': {
+                    'Block 1 Item 1 Sub Menu': {
+                        'Block 1 Item 1 Sub Menu 1 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
+                        'Block 1 Item 1 Sub Menu 2 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
-                    },
-                    'Sub Item 2': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
-                    },
-                    'Sub Item 3': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
+                        'Block 1 Item 1 Sub Menu 3 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         }
                     }
                 },
-                'Item 2': {
-                    'Sub Item 1': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
+                'Block 1 Item 2': {
+                    'Block 1 Item 2 Sub Menu': {
+                        'Block 1 Item 2 Sub Menu 1 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
+                        'Block 1 Item 2 Sub Menu 2 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
-                    },
-                    'Sub Item 2': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
-                    },
-                    'Sub Item 3': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
+                        'Block 1 Item 2 Sub Menu 3 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         }
                     }
                 },
-                'Item 3': {
-                    'Sub Item 1': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
+                'Block 1 Item 3': {
+                    'Block 1 Item 3 Sub Menu': {
+                        'Block 1 Item 3 Sub Menu 1 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
+                        'Block 1 Item 3 Sub Menu 2 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
+                        'Block 1 Item 3 Sub Menu 3 Sub Menu 1': {
+                            'Block 1 Item 1 Sub Menu 1 Sub Menu Item 1': function () {
+                                alert('Block 1 Item 1 Sub Menu 1 Sub Menu Item 1');
+                            }
                         }
-                    },
-                    'Sub Item 2': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
-                    },
-                    'Sub Item 3': {
-                        'Sub Sub Item 1': function () {
-                            alert('Sub Sub Item 1');
-                        },
-                        'Sub Sub Item 2': function () {
-                            alert('Sub Sub Item 2');
-                        },
-                        'Sub Sub Item 3': function () {
-                            alert('Sub Sub Item 3');
-                        }
+                    }
+                }
+            });
+            
+            $('#block2').contextMenu({
+                'Block 1 Item 1': {
+                    'Block 1 Item 1 Sub Menu': function () {
+                        alert('Block 1 Item 1 Sub Menu');
+                    }
+                },
+                'Block 1 Item 2': {
+                    'Block 1 Item 2 Sub Menu': function () {
+                        alert('Block 1 Item 2 Sub Menu');
+                    }
+                },
+                'Block 1 Item 3': {
+                    'Block 1 Item 3 Sub Menu': function () {
+                        alert('Block 1 Item 3 Sub Menu');
                     }
                 }
             });

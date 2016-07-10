@@ -12,12 +12,12 @@ var contextMenu = false;
 
 $('head').prepend([
     $('<style/>').append([
-        '.context_menu, .context_sub_menu { background-color: rgb(245, 255, 250); border: 1px solid gray; border-radius: 3px; margin: 0; z-index: 1; padding: 5px 0; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; box-shadow: rgb(26, 26, 26) 5px 5px 15px; }',
-        '.context_menu { width: 350px; position: fixed; }',
+        '#context_menu, .context_sub_menu { background-color: rgb(245, 255, 250); border: 1px solid gray; border-radius: 3px; margin: 0; z-index: 1; padding: 5px 0; -webkit-touch-callout: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; box-shadow: rgb(26, 26, 26) 5px 5px 15px; }',
+        '#context_menu { width: 350px; position: fixed; }',
         '.context_sub_menu { width: 100%; position: absolute; display: none; }',
-        '.context_menu li, .context_sub_menu li { position: relative; list-style-type: none; padding: 10px; cursor: pointer; color: rgb(26, 26, 26); }',
-        '.context_menu li:hover, .context_sub_menu li:hover { background-color: rgb(66,129,244); color: rgb(245, 255, 250); }',
-        '.context_menu li strong, .context_sub_menu li strong { float: right; font-size: 125% }'
+        '#context_menu li, .context_sub_menu li { position: relative; list-style-type: none; padding: 10px; cursor: pointer; color: rgb(26, 26, 26); }',
+        '#context_menu li:hover, .context_sub_menu li:hover { background-color: rgb(66,129,244); color: rgb(245, 255, 250); }',
+        '#context_menu li strong, .context_sub_menu li strong { float: right; font-size: 125% }'
     ])
 ]);
 
@@ -30,7 +30,7 @@ function bindContextMenu(setup, e) {
     var menuItems = initMenuOptions(setup);
 
     $('body').prepend([
-        $('<ul/>', {id: 'context_menu', class: 'context_menu'}).css({
+        $('<ul/>', {id: 'context_menu'}).css({
         }).on('click', function (ev) {
             ev.stopPropagation();
         }).append(menuItems)
@@ -115,7 +115,7 @@ function initMenuOptions(setup) {
 
 function removeContextMenu(i) {
     contextMenu = false;
-    $('.context_menu').remove();
+    $('#context_menu').remove();
 }
 
 (function ($) {
