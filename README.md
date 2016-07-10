@@ -62,4 +62,6 @@ A hover pseudo class is used, and a strong element is used to float the 'chevron
 
 I have deliberately kept this minimal to allow for flexibility.
 
+#Please see the demo 'index.html' file for more assistance.
+
 Enjoy.
