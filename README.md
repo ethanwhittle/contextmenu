@@ -20,21 +20,21 @@ The function requires an object to be parsed. The example below will result in a
 
 You then have to decide what to do with the item in the context menu, this can be defined with a function. For example:
 
-$('body').contextMenu({
+'$('body').contextMenu({
   'Item 1': function() {
     alert('Item 1');
   }
-});
+});'
 
 You can build more complex 'nested' contextmenu's but parseing objects into the item in the context menu. For example:
 
-$('body').contextMenu({
+'$('body').contextMenu({
   'Item 1': {
     'Item 1 Sub Item 1': function() {
     alert('Item 1 Sub Item 1');
     }
   }
-});
+});'
 
 This will result in a basic nested context menu. 
 
